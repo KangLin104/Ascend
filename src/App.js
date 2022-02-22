@@ -1,11 +1,23 @@
 import React from "react";
 
+import {
+  BrowserRouter,
+  Routes,
+  Route
+} from "react-router-dom";
+import Membership from './pages/Membership.js'
+import Committees from './pages/Committees.js'
+import MainPage from './pages/MainPage.js'
 
 const App =() => {
   return (
-    <div>
-      <h1>Ascend Website</h1>
-    </div>
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<MainPage />} />
+      <Route path="membership" element={<Membership />} />
+      <Route path="committees" element={<Committees />} />
+    </Routes>
+  </BrowserRouter>
   );
 }
 
